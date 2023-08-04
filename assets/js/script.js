@@ -164,6 +164,23 @@ function runGame() {
             buttons.style.backgroundColor = originalColor;
         }, 300); // Remove the light-up effect after .3 seconds
     }
+
+    /**
+     * plays the sequence of colors
+     */
+    function playSequence() {
+        let index = 0;
+        let interval = setInterval(function () {
+            if (index >= cpuSequenceArray.length) {
+                clearInterval(interval);
+                playerTurn = true;
+            } else {
+                let buttonToLightUp = document.querySelector(`[data-color="${cpuSequenceArray[index]}"]`);
+                lightUpButton(buttonToLightUp);
+                index++;
+            }
+        }, 500); // Interval between lighting up each color .5 seconds
+    }
 }
 
 function saveScore() {
