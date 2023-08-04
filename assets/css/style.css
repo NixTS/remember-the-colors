@@ -163,3 +163,29 @@ main {
     left: 30px;
     top: 50px;
 }
+
+/* instruction screen text positions */
+
+.top-left-button p {
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+}
+
+.top-right-button p {
+    position: absolute;
+    left: 30px;
+    bottom: 50px;
+}
+
+.bottom-left-button p {
+    position: absolute;
+    right: 30px;
+    top: 50px;
+}
+
+.bottom-right-button p {
+    position: absolute;
+    left: 30px;
+    top: 50px;
+}
