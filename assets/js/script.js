@@ -53,10 +53,22 @@ function navigationMenu() {
     });
 }
 
+/**
+ * Back to the Menu function, only appears outside the start-screen and game-area
+ */
 function backToMenu() {
+    let backToMenu = document.getElementById("back-to-menu");
 
+    function handleClick() {
+        window.location.reload();
+    }
+
+    backToMenu.addEventListener("click", handleClick);
 }
 
+function bestScores() {
+
+}
 function bestScores() {
 
 }
