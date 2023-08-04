@@ -189,3 +189,12 @@ main {
     left: 30px;
     top: 50px;
 }
+
+/* side menu */
+
+#side-menu {
+    position: fixed;
+    left: 1700px;
+    top: 100px;
+    display: none;
+}
