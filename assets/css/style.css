@@ -77,3 +77,89 @@ main {
     align-items: center;
     justify-content: center;
 }
+
+/* game area */
+
+.game-area {
+    width: 600px;
+    height: 600px;
+    border: 5px solid grey;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 0px, rgba(0, 0, 0, 0.2) 0px 0px 10px 0px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+/* middle circle */
+
+.mid-circle {
+    width: 100px;
+    height: 100px;
+    border: 10px solid var(--main-contrast);
+    background-color: orange;
+    border-radius: 50%;
+    position: absolute;
+    align-self: center;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* color buttons */
+
+.buttons {
+    width: 50%;
+    height: 50%;
+    box-sizing: border-box;
+    border: 5px solid var(--main-contrast);
+    position: relative;
+    background-color: "";
+}
+
+.top-left-button {
+    background-color: var(--red);
+    border-radius: 100% 0 0 0;
+}
+
+.top-left-button h2 {
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+}
+
+.top-right-button {
+    background-color: var(--blue);
+    border-radius: 0 100% 0 0;
+}
+
+.top-right-button h2 {
+    position: absolute;
+    left: 30px;
+    bottom: 50px;
+}
+
+.bottom-left-button {
+    background-color: var(--yellow);
+    border-radius: 0 0 0 100%;
+}
+
+.bottom-left-button h2 {
+    position: absolute;
+    right: 30px;
+    top: 50px;
+}
+
+.bottom-right-button {
+    background-color: var(--green);
+    border-radius: 0 0 100% 0;
+}
+
+.bottom-right-button h2 {
+    position: absolute;
+    left: 30px;
+    top: 50px;
+}
