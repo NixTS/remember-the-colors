@@ -109,6 +109,8 @@ function chooseDifficulty() {
 }
 
 function showCurrentScore() {
+    let newScore = playerSequence.length;
+    document.getElementById("current-score").textContent = newScore;
 
 }
 
@@ -199,6 +201,8 @@ function runGame() {
                             playerSequence = [];
                             playSequence();
                         }, 2000); // Delay before starting the next round, 2 seconds
+                        showCurrentScore();
+
                     }
                 } else {
                     alert("Oops, that was incorrect, good luck next time!");
