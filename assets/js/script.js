@@ -181,6 +181,44 @@ function runGame() {
             }
         }, 500); // Interval between lighting up each color .5 seconds
     }
+
+    // Event listener for the color button click for the player's turn
+    colorButtons.forEach(function (buttons) {
+        buttons.addEventListener("click", function () {
+            if (playerTurn) {
+                let color = this.dataset.color;
+                playerSequence.push(color);
+                lightUpButton(this);
+
+                if (checkPlayerSequence()) {
+                    if (playerSequence.length === cpuSequenceArray.length) {
+                        playerTurn = false;
+                        round++;
+                        setTimeout(function () {
+                            addToSequence();
+                            playerSequence = [];
+                            playSequence();
+                        }, 2000); // Delay before starting the next round, 2 seconds
+                    }
+                } else {
+                    alert("Oops, that was incorrect, good luck next time!");
+                }
+            }
+        });
+    });
+
+    /**
+     * check if the player's sequence matches the generated sequence
+     * @returns true if sequence was correct and false it sequence was incorrect
+     */
+    function checkPlayerSequence() {
+        for (let i = 0; i < playerSequence.length; i++) {
+            if (playerSequence[i] !== cpuSequenceArray[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
 function saveScore() {
