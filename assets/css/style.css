@@ -4,8 +4,14 @@
     border: none;
 }
 
-a {
-    text-decoration: none;
+
+
+:root {
+    --main-contrast: rgb(150, 232, 238);
+    --red: rgba(255, 0, 0, 0.8);
+    --blue: rgba(0, 60, 255, 0.8);
+    --yellow: rgba(229, 255, 0, 0.8);
+    --green: rgba(5, 212, 57, 0.8);
 }
 
 /* general */
@@ -24,6 +30,10 @@ h1 {
 
 h4 {
     font-size: 80%;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* header */
