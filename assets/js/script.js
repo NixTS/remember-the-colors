@@ -152,6 +152,18 @@ function runGame() {
         let color = getRandomColor();
         cpuSequenceArray.push(color);
     }
+
+    /**
+     * lights up a button, in form of a backgroudncolor change, for a short duration, .3 seconds
+     * @param {*} buttons 
+     */
+    function lightUpButton(buttons) {
+        let originalColor = buttons.style.backgroundColor;
+        buttons.style.backgroundColor = "white";
+        setTimeout(function () {
+            buttons.style.backgroundColor = originalColor;
+        }, 300); // Remove the light-up effect after .3 seconds
+    }
 }
 
 function saveScore() {
