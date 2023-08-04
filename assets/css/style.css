@@ -1,4 +1,49 @@
-body {
-
-background-color: red;
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
 }
+
+a {
+    text-decoration: none;
+}
+
+/* general */
+
+body {
+    height: 100vh;
+    font-family: "comic sans MS", "comic sans";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+h4 {
+    font-size: 80%;
+}
+
+/* header */
+
+header {
+    background-color: yellow;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer */
+
+footer {
+    background-color: yellow;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* main area */
