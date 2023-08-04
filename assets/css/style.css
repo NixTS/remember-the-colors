@@ -78,6 +78,11 @@ main {
     justify-content: center;
 }
 
+.back-to-menu {
+    margin-top: -70px;
+    display: none;
+}
+
 /* game area */
 
 .game-area {
