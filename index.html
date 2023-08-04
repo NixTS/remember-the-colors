@@ -11,7 +11,6 @@
   </head>
 
   <body>
-
     <!-- start header content -->
     <header>
       <h1>Tobis Remember The Colors Game</h1>
@@ -20,8 +19,43 @@
 
     <!-- start main content -->
     <main>
+      <!-- start main screen -->
+      <div class="main-area toggle" id="start-screen">
+        <div class="game-area">
+          <div class="mid-circle"></div>
+          <div
+            class="top-left-button buttons"
+            id="start-game"
+            onclick="navigationMenu();"
+          >
+            <h2>Start</h2>
+          </div>
+          <div
+            class="top-right-button buttons"
+            id="instructions"
+            onclick="navigationMenu();"
+          >
+            <h2>Instructions</h2>
+          </div>
+          <div
+            class="bottom-left-button buttons"
+            id="scores"
+            onclick="navigationMenu();"
+          >
+            <h2>Score</h2>
+          </div>
+          <div
+            class="bottom-right-button buttons"
+            id="credits"
+            onclick="navigationMenu();"
+          >
+            <h2>Credits</h2>
+          </div>
+        </div>
+      </div>
+      <!-- end main screen -->
 
-    </main>
+   </main>
     <!-- end main content -->
 
     <!-- start footer content -->
@@ -36,7 +70,5 @@
 
     <!-- java script file -->
     <script src="assets/js/script.js"></script>
-    
   </body>
-
 </html>
