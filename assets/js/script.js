@@ -12,6 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+// global
+let colorButton = document.getElementsByClassName("buttons");
+let colorButtons = Array.from(colorButton);
+let goButton = document.getElementById("go-button");
+
+let cpuSequenceArray = [];
+let playerSequence = [];
+
 /**
  * Menu Navigation 
  */
@@ -106,10 +114,26 @@ function showCurrentScore() {
 
 function turnColorBlindOption() {
 
-} 
+}
 
+/**
+ * Creates a random number between 0 and 3 and assigns a color (0 = red, 1 = blue, 2 = yellow, 3 = green)
+ * when the Go Button is clicked, the random color will light up for a short time
+ * the player has to repeat the sequence by clicking on the colored buttons
+ */
 function runGame() {
+    let round = 1;
+    let playerTurn = false;
 
+    // Event listener for the go button click
+    goButton.addEventListener("click", function () {
+        cpuSequenceArray = [];
+        playerSequence = [];
+        round = 1;
+        playerTurn = false;
+        addToSequence();
+        playSequence();
+    });
 }
 
 function saveScore() {
