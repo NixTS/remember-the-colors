@@ -73,8 +73,31 @@ function bestScores() {
 
 }
 
+/**
+ * Choosing either hard or normal difficulty will result in the same "game-screen" but with a different sidebar
+ */
 function chooseDifficulty() {
+    let difficultyNormal = document.getElementById("difficulty-normal");
+    let difficultyHard = document.getElementById("difficulty-hard");
+    let difficultyScreen = document.getElementById("difficulty-screen");
+    let sideMenu = document.getElementById("side-menu");
+    let repeatPattern = document.getElementById("repeat-pattern");
 
+    let gameNormal = document.getElementById("game-screen");
+    let gameHard = document.getElementById("game-screen");
+
+    difficultyNormal.addEventListener("click", function () {
+        difficultyScreen.style.display = "none";
+        gameNormal.style.display = "flex";
+        sideMenu.style.display = "block";
+    });
+
+    difficultyHard.addEventListener("click", function () {
+        difficultyScreen.style.display = "none";
+        gameHard.style.display = "flex";
+        sideMenu.style.display = "block";
+        repeatPattern.style.display = "none";
+    });
 }
 
 function showCurrentScore() {
