@@ -134,6 +134,24 @@ function runGame() {
         addToSequence();
         playSequence();
     });
+
+    /**
+     * create a random number and assign it to the correct colored div
+     * @returns a random number from 0 to the 4 (length of the array)
+     */
+    function getRandomColor() {
+        let colors = ["0", "1", "2", "3"];
+        let randomIndex = Math.floor(Math.random() * colors.length);
+        return colors[randomIndex];
+    }
+
+    /**
+     * adds a new random number to the cpuSequenceArray after every round
+     */
+    function addToSequence() {
+        let color = getRandomColor();
+        cpuSequenceArray.push(color);
+    }
 }
 
 function saveScore() {
