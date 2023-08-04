@@ -19,6 +19,7 @@
 body {
     height: 100vh;
     font-family: "comic sans MS", "comic sans";
+    background-color: var(--main-contrast);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -57,3 +58,22 @@ footer {
 }
 
 /* main area */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-area {
+    width: 800px;
+    height: 800px;
+    margin: 80px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px, rgba(0, 0, 0, 0.1) 0px 0px 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
