@@ -12,8 +12,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+/**
+ * Menu Navigation 
+ */
 function navigationMenu() {
+    let startScreen = document.getElementById("start-screen");
+    let startGame = document.getElementById("start-game");
+    let gameInstructions = document.getElementById("instructions");
+    let scores = document.getElementById("scores");
+    let credits = document.getElementById("credits");
+    let backToMenu = document.getElementById("back-to-menu");
 
+    let difficultyScreen = document.getElementById("difficulty-screen");
+    let instructionsScreen = document.getElementById("instructions-screen");
+    let scoresScreen = document.getElementById("scores-screen");
+    let creditsScreen = document.getElementById("credits-screen");
+
+    startGame.addEventListener("click", function () {
+        difficultyScreen.style.display = "flex";
+        backToMenu.style.display = "block";
+        startScreen.style.display = "none";
+    });
+
+    gameInstructions.addEventListener("click", function () {
+        instructionsScreen.style.display = "flex";
+        backToMenu.style.display = "block";
+        startScreen.style.display = "none";
+    });
+
+    scores.addEventListener("click", function () {
+        scoresScreen.style.display = "flex";
+        backToMenu.style.display = "block";
+        startScreen.style.display = "none";
+    });
+
+    credits.addEventListener("click", function () {
+        creditsScreen.style.display = "flex";
+        backToMenu.style.display = "block";
+        startScreen.style.display = "none";
+    });
 }
 
 function backToMenu() {
