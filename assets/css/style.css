@@ -203,3 +203,7 @@ main {
     top: 100px;
     display: none;
 }
+
+.color-names {
+    display: none;
+}

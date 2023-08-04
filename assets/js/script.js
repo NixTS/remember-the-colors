@@ -114,8 +114,25 @@ function showCurrentScore() {
 
 }
 
-function turnColorBlindOption() {
+/**
+ * when clicked the color names will display on the game pad and the "On" span will change to "Off", and the other way around
+ */
+function turnColorNameOption() {
+    let colorNameButton = document.getElementById("side-color-name");
+    let colorNames = document.getElementsByClassName("color-names");
+    let colorNameOption = document.getElementById("color-name-option");
 
+    colorNameButton.addEventListener("click", function () {
+        for (let i = 0; i < colorNames.length; i++) {
+            if (colorNames[i].style.display === "none" || colorNames[i].style.display === "") {
+                colorNames[i].style.display = "flex";
+                colorNameOption.innerText = "Off";
+            } else {
+                colorNames[i].style.display = "none";
+                colorNameOption.innerText = "On";
+            }
+        }
+    });
 }
 
 /**
