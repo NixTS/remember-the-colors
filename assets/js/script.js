@@ -1,7 +1,6 @@
 // start screen appears after DOM is loaded
 document.addEventListener("DOMContentLoaded", function () {
     let toggleAll = document.getElementsByClassName("toggle");
-    let startScreen = document.getElementById("start-screen");
 
     for (let i = 0; 1 < toggleAll.length; i++) {
         toggleAll[i].style.display = "none";
@@ -12,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// global
+// global variables
 let gameMode = "normal"; // default game mode
 
 let colorButton = document.getElementsByClassName("buttons");
@@ -22,68 +21,102 @@ let goButton = document.getElementById("go-button");
 let cpuSequenceArray = [];
 let playerSequence = [];
 
+
+// variables for divs to be clicked in navigation menu
+let openGame = document.getElementById("start-game");
+let openInstructions = document.getElementById("instructions");
+let openScores = document.getElementById("scores");
+let openCredits = document.getElementById("credits");
+
+// variables for screens to appear in navigation menu
+let startScreen = document.getElementById("start-screen");
+let difficultyScreen = document.getElementById("difficulty-screen");
+let gameNormal = document.getElementById("game-screen");
+let gameHard = document.getElementById("game-screen");
+let losingScreen = document.getElementById("losing-screen");
+let instructionsScreen = document.getElementById("instructions-screen");
+let scoresScreen = document.getElementById("scores-screen");
+let creditsScreen = document.getElementById("credits-screen");
+
+// variables for divs to be clicked others
+let backToMenu = document.getElementById("back-to-menu");
+let difficultyNormal = document.getElementById("difficulty-normal");
+let difficultyHard = document.getElementById("difficulty-hard");
+let colorNameButton = document.getElementById("side-color-name");
+
+// variables for divs to appear others
+let infoScreen = document.getElementById("info-screen");
+let sideMenu = document.getElementById("side-menu");
+
 /**
- * Menu Navigation 
+ * open the difficulty menu to start the game
+ * infoScreen and backToMenu appears
+ * infoScreen text changes to current screen name
  */
-function navigationMenu() {
-    let startScreen = document.getElementById("start-screen");
-    let startGame = document.getElementById("start-game");
-    let gameInstructions = document.getElementById("instructions");
-    let scores = document.getElementById("scores");
-    let credits = document.getElementById("credits");
-    let backToMenu = document.getElementById("back-to-menu");
-
-    let difficultyScreen = document.getElementById("difficulty-screen");
-    let instructionsScreen = document.getElementById("instructions-screen");
-    let scoresScreen = document.getElementById("scores-screen");
-    let creditsScreen = document.getElementById("credits-screen");
-    let infoScreen = document.getElementById("info-screen");
-
-    startGame.addEventListener("click", function () {
-        difficultyScreen.style.display = "flex";
-        backToMenu.style.display = "block";
-        startScreen.style.display = "none";
-        infoScreen.style.display = "flex";
-        document.getElementById("info-text").textContent = "Difficulty Selection";
-    });
-
-    gameInstructions.addEventListener("click", function () {
-        instructionsScreen.style.display = "flex";
-        backToMenu.style.display = "block";
-        startScreen.style.display = "none";
-        infoScreen.style.display = "flex";
-        document.getElementById("info-text").textContent = "Instructions";
-    });
-
-    scores.addEventListener("click", function () {
-        scoresScreen.style.display = "flex";
-        backToMenu.style.display = "block";
-        startScreen.style.display = "none";
-        infoScreen.style.display = "flex";
-        document.getElementById("info-text").textContent = "Scores";
-    });
-
-    credits.addEventListener("click", function () {
-        creditsScreen.style.display = "flex";
-        backToMenu.style.display = "block";
-        startScreen.style.display = "none";
-        infoScreen.style.display = "flex";
-        document.getElementById("info-text").textContent = "Credits";
-    });
+function startTheGame() {
+    difficultyScreen.style.display = "flex";
+    infoScreen.style.display = "flex";
+    backToMenu.style.display = "flex";
+    startScreen.style.display = "none";
+    document.getElementById("info-text").textContent = "Difficulty Selection";
 }
 
 /**
- * Back to the Menu function, only appears outside the start-screen and game-area
+ * open the instructions
+ * infoScreen and backToMenu appears
+ * infoScreen text changes to current screen name
  */
-function backToMenu() {
-    let backToMenu = document.getElementById("back-to-menu");
-
-    function handleClick() {
-        window.location.reload();
-    }
-
-    backToMenu.addEventListener("click", handleClick);
+function openTheInstructions() {
+    instructionsScreen.style.display = "flex";
+    infoScreen.style.display = "flex";
+    backToMenu.style.display = "flex";
+    startScreen.style.display = "none";
+    document.getElementById("info-text").textContent = "Instructions";
 }
+
+/**
+ * open the scores
+ * infoScreen and backToMenu appears
+ * infoScreen text changes to current screen name
+ */
+function openTheScores() {
+    scoresScreen.style.display = "flex";
+    infoScreen.style.display = "flex";
+    backToMenu.style.display = "flex";
+    startScreen.style.display = "none";
+    document.getElementById("info-text").textContent = "Scores";
+}
+
+/**
+ * open the credits
+ * infoScreen and backToMenu appears
+ * infoScreen text changes to current screen name
+ */
+function openTheCredits() {
+    creditsScreen.style.display = "flex";
+    infoScreen.style.display = "flex";
+    backToMenu.style.display = "flex";
+    startScreen.style.display = "none";
+    document.getElementById("info-text").textContent = "Credits";
+}
+
+// event listeners for menu navigation
+openGame.addEventListener("click", startTheGame);
+openInstructions.addEventListener("click", openTheInstructions);
+openScores.addEventListener("click", openTheScores);
+openCredits.addEventListener("click", openTheCredits);
+
+/**
+ * Back to the Menu function, only appears outside the start-screen
+ * refreshes the page
+ */
+function backToTheMenu() {
+    window.location.reload();
+}
+
+// event listener for the back to menu div
+backToMenu.addEventListener("click", backToTheMenu);
+
 
 function bestScores() {
 
@@ -93,34 +126,32 @@ function bestScores() {
 }
 
 /**
- * Choosing either hard or normal difficulty will result in the same "game-screen" but with a different sidebar
+ * choosing 'normal' difficulty
+ * intervals will be changed in function playSequence()
  */
-function chooseDifficulty() {
-    let difficultyNormal = document.getElementById("difficulty-normal");
-    let difficultyHard = document.getElementById("difficulty-hard");
-    let difficultyScreen = document.getElementById("difficulty-screen");
-    let sideMenu = document.getElementById("side-menu");
-
-    let gameNormal = document.getElementById("game-screen");
-    let gameHard = document.getElementById("game-screen");
-
-    difficultyNormal.addEventListener("click", function () {
-        difficultyScreen.style.display = "none";
-        gameNormal.style.display = "flex";
-        sideMenu.style.display = "block";
-        document.getElementById("info-text").textContent = "Press 'GO!' to start the Game!";
-        gameMode = "normal";
-    });
-
-    difficultyHard.addEventListener("click", function () {
-        difficultyScreen.style.display = "none";
-        gameHard.style.display = "flex";
-        sideMenu.style.display = "block";
-        document.getElementById("info-text").textContent = "Press 'GO!' to start the Game!";
-        gameMode = "hard";
-    });
-    playSequence();
+function chooseDifficultyNormal() {
+    difficultyScreen.style.display = "none";
+    gameNormal.style.display = "flex";
+    sideMenu.style.display = "block";
+    document.getElementById("info-text").textContent = "Press 'GO!' to start the Game!";
+    gameMode = "normal";
 }
+
+/**
+ * choosing 'hard' difficulty
+ * intervals will be changed in function playSequence()
+ */
+function chooseDifficultyHard() {
+    difficultyScreen.style.display = "none";
+    gameHard.style.display = "flex";
+    sideMenu.style.display = "block";
+    document.getElementById("info-text").textContent = "Press 'GO!' to start the Game!";
+    gameMode = "hard";
+}
+
+// event listeners for choosing difficulty
+difficultyNormal.addEventListener("click", chooseDifficultyNormal);
+difficultyHard.addEventListener("click", chooseDifficultyHard);
 
 function showCurrentScore() {
     let newScore = playerSequence.length;
@@ -136,22 +167,22 @@ function showCurrentScore() {
  * when clicked the color names will display on the game pad and the "On" span will change to "Off", and the other way around
  */
 function turnColorNameOption() {
-    let colorNameButton = document.getElementById("side-color-name");
     let colorNames = document.getElementsByClassName("color-names");
     let colorNameOption = document.getElementById("color-name-option");
 
-    colorNameButton.addEventListener("click", function () {
-        for (let i = 0; i < colorNames.length; i++) {
-            if (colorNames[i].style.display === "none" || colorNames[i].style.display === "") {
-                colorNames[i].style.display = "flex";
-                colorNameOption.innerText = "Off";
-            } else {
-                colorNames[i].style.display = "none";
-                colorNameOption.innerText = "On";
-            }
+    for (let i = 0; i < colorNames.length; i++) {
+        if (colorNames[i].style.display === "none" || colorNames[i].style.display === "") {
+            colorNames[i].style.display = "flex";
+            colorNameOption.innerText = "Off";
+        } else {
+            colorNames[i].style.display = "none";
+            colorNameOption.innerText = "On";
         }
-    });
+    }
 }
+
+// event listener to turn on/off color names option
+colorNameButton.addEventListener("click", turnColorNameOption);
 
 /**
  * Creates a random number between 0 and 3 and assigns a color (0 = red, 1 = blue, 2 = yellow, 3 = green)
@@ -162,16 +193,13 @@ function runGame() {
     let round = 1;
     let playerTurn = false;
 
-    // Event listener for the go button click
-    goButton.addEventListener("click", function () {
-        cpuSequenceArray = [];
-        playerSequence = [];
-        round = 1;
-        playerTurn = false;
-        addToSequence();
-        playSequence();
-        gameInfo();
-    });
+    cpuSequenceArray = [];
+    playerSequence = [];
+    round = 1;
+    playerTurn = false;
+    addToSequence();
+    playSequence();
+    gameInfo();
 
     /**
      * create a random number and assign it to the correct colored div
@@ -279,14 +307,25 @@ function runGame() {
 
         }
     }
+
+    /**
+    * Set the game mode to normal or hard
+    * @param {string} mode - "normal" or "hard"
+    */
+    function setGameMode(mode) {
+        gameMode = mode;
+        console.log(`Game Mode set to ${gameMode}`);
+    }
 }
+
+// Event listener for the go button click
+goButton.addEventListener("click", runGame);
 
 function saveScore() {
 
 }
 
 function gameEndCard() {
-    let losingScreen = document.getElementById("losing-screen");
     let gameNormal = document.getElementById("game-screen");
     let infoText = document.getElementById("info-text");
 
