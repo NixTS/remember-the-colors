@@ -76,11 +76,16 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 30px;
+}
+
+#info-screen {
+    margin-top: 10px;
+
 }
 
 .back-to-menu {
-    margin-top: -70px;
-    display: none;
+    margin-bottom: 10px;
 }
 
 /* game area */

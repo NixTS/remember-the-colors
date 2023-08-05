@@ -35,29 +35,34 @@ function navigationMenu() {
     let instructionsScreen = document.getElementById("instructions-screen");
     let scoresScreen = document.getElementById("scores-screen");
     let creditsScreen = document.getElementById("credits-screen");
+    let infoScreen = document.getElementById("info-screen");
 
     startGame.addEventListener("click", function () {
         difficultyScreen.style.display = "flex";
         backToMenu.style.display = "block";
         startScreen.style.display = "none";
+        infoScreen.style.display = "flex";
     });
 
     gameInstructions.addEventListener("click", function () {
         instructionsScreen.style.display = "flex";
         backToMenu.style.display = "block";
         startScreen.style.display = "none";
+        infoScreen.style.display = "flex";
     });
 
     scores.addEventListener("click", function () {
         scoresScreen.style.display = "flex";
         backToMenu.style.display = "block";
         startScreen.style.display = "none";
+        infoScreen.style.display = "flex";
     });
 
     credits.addEventListener("click", function () {
         creditsScreen.style.display = "flex";
         backToMenu.style.display = "block";
         startScreen.style.display = "none";
+        infoScreen.style.display = "flex";
     });
 }
 
@@ -152,6 +157,7 @@ function runGame() {
         playerTurn = false;
         addToSequence();
         playSequence();
+        repeatSequence();
     });
 
     /**
@@ -200,6 +206,8 @@ function runGame() {
             }
         }, 500); // Interval between lighting up each color .5 seconds
     }
+
+
 
     // Event listener for the color button click for the player's turn
     colorButtons.forEach(function (buttons) {
