@@ -42,6 +42,7 @@ function navigationMenu() {
         backToMenu.style.display = "block";
         startScreen.style.display = "none";
         infoScreen.style.display = "flex";
+        document.getElementById("info-text").textContent = "Difficulty Selection";
     });
 
     gameInstructions.addEventListener("click", function () {
@@ -49,6 +50,7 @@ function navigationMenu() {
         backToMenu.style.display = "block";
         startScreen.style.display = "none";
         infoScreen.style.display = "flex";
+        document.getElementById("info-text").textContent = "Instructions";
     });
 
     scores.addEventListener("click", function () {
@@ -56,6 +58,7 @@ function navigationMenu() {
         backToMenu.style.display = "block";
         startScreen.style.display = "none";
         infoScreen.style.display = "flex";
+        document.getElementById("info-text").textContent = "Scores";
     });
 
     credits.addEventListener("click", function () {
@@ -63,6 +66,7 @@ function navigationMenu() {
         backToMenu.style.display = "block";
         startScreen.style.display = "none";
         infoScreen.style.display = "flex";
+        document.getElementById("info-text").textContent = "Credits";
     });
 }
 
@@ -102,12 +106,14 @@ function chooseDifficulty() {
         difficultyScreen.style.display = "none";
         gameNormal.style.display = "flex";
         sideMenu.style.display = "block";
+        document.getElementById("info-text").textContent = "Press 'GO!' to start the Game!";
     });
 
     difficultyHard.addEventListener("click", function () {
         difficultyScreen.style.display = "none";
         gameHard.style.display = "flex";
         sideMenu.style.display = "block";
+        document.getElementById("info-text").textContent = "Press 'GO!' to start the Game!";
     });
 }
 
@@ -159,6 +165,7 @@ function runGame() {
         playerTurn = false;
         addToSequence();
         playSequence();
+        gameInfo();
     });
 
     /**
@@ -200,12 +207,14 @@ function runGame() {
             if (index >= cpuSequenceArray.length) {
                 clearInterval(interval);
                 playerTurn = true;
+                gameInfo();
             } else {
                 let buttonToLightUp = document.querySelector(`[data-color="${cpuSequenceArray[index]}"]`);
                 lightUpButton(buttonToLightUp);
                 index++;
             }
         }, 500); // Interval between lighting up each color .5 seconds
+        gameInfo();
     }
 
 
@@ -228,7 +237,6 @@ function runGame() {
                             playSequence();
                         }, 2000); // Delay before starting the next round, 2 seconds
                         showCurrentScore();
-
                     }
                 } else {
                     gameEndCard();
@@ -249,6 +257,17 @@ function runGame() {
         }
         return true;
     }
+
+    function gameInfo() {
+        let infoText = document.getElementById("info-text");
+
+        if (playerTurn) {
+            infoText.textContent = "Do you remember the correct sequence?";
+        } else {
+            infoText.textContent = "Remember the sequence!";
+
+        }
+    }
 }
 
 function saveScore() {
@@ -258,7 +277,9 @@ function saveScore() {
 function gameEndCard() {
     let losingScreen = document.getElementById("losing-screen");
     let gameNormal = document.getElementById("game-screen");
+    let infoText = document.getElementById("info-text");
 
+    infoText.textContent = "Oops...";
     losingScreen.style.display = "flex";
     gameNormal.style.display = "none";
 }
