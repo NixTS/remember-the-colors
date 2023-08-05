@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // global
+let gameMode = "normal"; // default game mode
+
 let colorButton = document.getElementsByClassName("buttons");
 let colorButtons = Array.from(colorButton);
 let goButton = document.getElementById("go-button");
@@ -107,6 +109,7 @@ function chooseDifficulty() {
         gameNormal.style.display = "flex";
         sideMenu.style.display = "block";
         document.getElementById("info-text").textContent = "Press 'GO!' to start the Game!";
+        gameMode = "normal";
     });
 
     difficultyHard.addEventListener("click", function () {
@@ -114,7 +117,9 @@ function chooseDifficulty() {
         gameHard.style.display = "flex";
         sideMenu.style.display = "block";
         document.getElementById("info-text").textContent = "Press 'GO!' to start the Game!";
+        gameMode = "hard";
     });
+    playSequence();
 }
 
 function showCurrentScore() {
@@ -195,14 +200,18 @@ function runGame() {
         buttons.style.backgroundColor = "white";
         setTimeout(function () {
             buttons.style.backgroundColor = originalColor;
-        }, 300); // Remove the light-up effect after .3 seconds
+        }, 250); // Remove the light-up effect after .25 seconds
     }
 
     /**
-     * plays the sequence of colors
+     * plays the sequence of colors in two different game difficultys
+     * normal = intervalDuration is 600ms
+     * hard = intervalDuration is 350ms
      */
     function playSequence() {
         let index = 0;
+        let intervalDuration = (gameMode === "normal") ? 600 : 350; // interval duration based on game mode
+
         let interval = setInterval(function () {
             if (index >= cpuSequenceArray.length) {
                 clearInterval(interval);
@@ -213,11 +222,13 @@ function runGame() {
                 lightUpButton(buttonToLightUp);
                 index++;
             }
-        }, 500); // Interval between lighting up each color .5 seconds
+        }, intervalDuration); // Interval between lighting up each color
+
+        if (gameMode === "normal") {
+        } else if (gameMode === "hard") {
+        }
         gameInfo();
     }
-
-
 
     // Event listener for the color button click for the player's turn
     colorButtons.forEach(function (buttons) {
