@@ -94,7 +94,6 @@ function chooseDifficulty() {
     let difficultyHard = document.getElementById("difficulty-hard");
     let difficultyScreen = document.getElementById("difficulty-screen");
     let sideMenu = document.getElementById("side-menu");
-    let repeatPattern = document.getElementById("repeat-pattern");
 
     let gameNormal = document.getElementById("game-screen");
     let gameHard = document.getElementById("game-screen");
@@ -109,15 +108,18 @@ function chooseDifficulty() {
         difficultyScreen.style.display = "none";
         gameHard.style.display = "flex";
         sideMenu.style.display = "block";
-        repeatPattern.style.display = "none";
     });
 }
 
 function showCurrentScore() {
     let newScore = playerSequence.length;
-    document.getElementById("current-score").textContent = newScore;
+    let insertScore = document.getElementsByClassName("current-score");
 
+    for (let i = 0; i < insertScore.length; i++) {
+        insertScore[i].textContent = newScore;
+    };
 }
+
 
 /**
  * when clicked the color names will display on the game pad and the "On" span will change to "Off", and the other way around
@@ -157,7 +159,6 @@ function runGame() {
         playerTurn = false;
         addToSequence();
         playSequence();
-        repeatSequence();
     });
 
     /**
@@ -230,7 +231,7 @@ function runGame() {
 
                     }
                 } else {
-                    alert("Oops, that was incorrect, good luck next time!");
+                    gameEndCard();
                 }
             }
         });
@@ -255,5 +256,9 @@ function saveScore() {
 }
 
 function gameEndCard() {
+    let losingScreen = document.getElementById("losing-screen");
+    let gameNormal = document.getElementById("game-screen");
 
+    losingScreen.style.display = "flex";
+    gameNormal.style.display = "none";
 }
