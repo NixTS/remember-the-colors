@@ -8,10 +8,11 @@
 
 :root {
     --main-contrast: rgb(150, 232, 238);
-    --red: rgba(255, 0, 0, 0.8);
-    --blue: rgba(0, 60, 255, 0.8);
-    --yellow: rgba(229, 255, 0, 0.8);
-    --green: rgba(5, 212, 57, 0.8);
+    --red: rgb(255, 47, 47);
+    --blue: rgb(43, 91, 248);
+    --yellow: rgb(233, 253, 47);
+    --green: rgb(21, 224, 72);
+    --borders: rgba(51, 51, 51, 1);
 }
 
 /* general */
@@ -29,8 +30,16 @@ h1 {
     font-size: 200%;
 }
 
+h2 {
+    font-size: 200%;
+}
+
 h4 {
     font-size: 80%;
+}
+
+p {
+    font-size: 100%;
 }
 
 a {
@@ -88,27 +97,33 @@ main {
     margin-bottom: 10px;
 }
 
+#in-button-score {
+    display: block;
+    text-align: center;
+}
+
 /* game area */
 
 .game-area {
     width: 600px;
     height: 600px;
-    border: 5px solid grey;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 0px, rgba(0, 0, 0, 0.2) 0px 0px 10px 0px;
-    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
+    background-color: var(--borders);
+    border: 5px solid var(--borders);
+    border-radius: 20px;
 }
 
 /* middle circle */
 
 .mid-circle {
-    width: 100px;
-    height: 100px;
-    border: 10px solid var(--main-contrast);
+    width: 220px;
+    height: 220px;
+    border: 15px solid var(--borders);
     background-color: orange;
     border-radius: 50%;
     position: absolute;
@@ -119,85 +134,51 @@ main {
     justify-content: center;
 }
 
+#go-button h2 {
+    font-size: 400%;
+    font-weight: 900;
+}
+
 /* color buttons */
 
 .buttons {
     width: 50%;
     height: 50%;
     box-sizing: border-box;
-    border: 5px solid var(--main-contrast);
+    border: 10px solid var(--borders);
     position: relative;
-    background-color: "";
 }
 
 .top-left-button {
     background-color: var(--red);
-    border-radius: 100% 0 0 0;
-}
-
-.top-left-button h2 {
-    position: absolute;
-    right: 30px;
-    bottom: 50px;
+    border-radius: 50px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .top-right-button {
     background-color: var(--blue);
-    border-radius: 0 100% 0 0;
-}
-
-.top-right-button h2 {
-    position: absolute;
-    left: 30px;
-    bottom: 50px;
+    border-radius: 0 50px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bottom-left-button {
     background-color: var(--yellow);
-    border-radius: 0 0 0 100%;
-}
-
-.bottom-left-button h2 {
-    position: absolute;
-    right: 30px;
-    top: 50px;
+    border-radius: 0 0 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bottom-right-button {
     background-color: var(--green);
-    border-radius: 0 0 100% 0;
-}
-
-.bottom-right-button h2 {
-    position: absolute;
-    left: 30px;
-    top: 50px;
-}
-
-/* instruction screen text positions */
-
-.top-left-button p {
-    position: absolute;
-    right: 30px;
-    bottom: 50px;
-}
-
-.top-right-button p {
-    position: absolute;
-    left: 30px;
-    bottom: 50px;
-}
-
-.bottom-left-button p {
-    position: absolute;
-    right: 30px;
-    top: 50px;
-}
-
-.bottom-right-button p {
-    position: absolute;
-    left: 30px;
-    top: 50px;
+    border-radius: 0 0 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* side menu */

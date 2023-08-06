@@ -201,6 +201,10 @@ function runGame() {
     playSequence();
     gameInfo();
 
+    let goText = document.getElementById("go-text");
+    goText.style.display = "none";
+
+
     /**
      * create a random number and assign it to the correct colored div
      * @returns a random number from 0 to the 4 (length of the array)
