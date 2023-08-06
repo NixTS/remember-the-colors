@@ -128,7 +128,7 @@ backToMenu.addEventListener("click", backToTheMenu);
 function chooseDifficultyNormal() {
     difficultyScreen.style.display = "none";
     gameNormal.style.display = "flex";
-    sideMenu.style.display = "block";
+    sideMenu.style.display = "flex";
     document.getElementById("info-text").textContent = "Press 'GO!' to start the Game!";
     gameMode = "normal";
 }

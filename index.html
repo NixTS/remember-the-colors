@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,224 +9,221 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Tobis Remember The Colors</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- start header content -->
     <header>
-      <h1>Tobis Remember The Colors Game</h1>
+        <h1>Tobis Remember The Colors Game</h1>
     </header>
     <!-- end header content -->
 
     <!-- start main content -->
     <main>
-      <div class="main-area">
-        <!-- start info span -->
-        <div class="toggle" id="info-screen">
-          <h2 id="info-text"></h2>
-        </div>
-        <!-- end info span -->
+        <div class="main-area">
+            <!-- start info span -->
+            <div class="toggle" id="info-screen">
+                <h2 id="info-text"></h2>
+            </div>
+            <!-- end info span -->
 
-        <!-- start start screen -->
-        <div class="toggle" id="start-screen">
-          <div class="game-area">
-            <div class="mid-circle"></div>
-            <div class="top-left-button buttons" id="start-game">
-              <h2>Start</h2>
+            <!-- start start screen -->
+            <div class="toggle" id="start-screen">
+                <div class="game-area">
+                    <div class="mid-circle"></div>
+                    <div class="top-left-button buttons" id="start-game">
+                        <h2>Start</h2>
+                    </div>
+                    <div class="top-right-button buttons" id="instructions">
+                        <h2>Instructions</h2>
+                    </div>
+                    <div class="bottom-left-button buttons" id="scores">
+                        <h2>Score</h2>
+                    </div>
+                    <div class="bottom-right-button buttons" id="credits">
+                        <h2>Credits</h2>
+                    </div>
+                </div>
             </div>
-            <div class="top-right-button buttons" id="instructions">
-              <h2>Instructions</h2>
-            </div>
-            <div class="bottom-left-button buttons" id="scores">
-              <h2>Score</h2>
-            </div>
-            <div class="bottom-right-button buttons" id="credits">
-              <h2>Credits</h2>
-            </div>
-          </div>
-        </div>
-        <!-- end start screen -->
+            <!-- end start screen -->
 
-        <!-- start difficulty screen -->
-        <div class="toggle" id="difficulty-screen">
-          <div class="game-area">
-            <div class="mid-circle"></div>
-            <div class="top-left-button buttons">
-              <h2>
-                Choose a <br />
-                difficulty
-              </h2>
+            <!-- start difficulty screen -->
+            <div class="toggle" id="difficulty-screen">
+                <div class="game-area">
+                    <div class="mid-circle"></div>
+                    <div class="top-left-button buttons">
+                        <h2>
+                            Choose a <br />
+                            difficulty
+                        </h2>
+                    </div>
+                    <div class="top-right-button buttons">
+                        <h2></h2>
+                    </div>
+                    <div class="bottom-left-button buttons" id="difficulty-normal">
+                        <h2>Normal</h2>
+                    </div>
+                    <div class="bottom-right-button buttons" id="difficulty-hard">
+                        <h2>Hard</h2>
+                    </div>
+                </div>
             </div>
-            <div class="top-right-button buttons">
-              <h2></h2>
-            </div>
-            <div class="bottom-left-button buttons" id="difficulty-normal">
-              <h2>Normal</h2>
-            </div>
-            <div class="bottom-right-button buttons" id="difficulty-hard">
-              <h2>Hard</h2>
-            </div>
-          </div>
-        </div>
-        <!-- end difficulty screen -->
+            <!-- end difficulty screen -->
 
-        <!-- start game screen -->
-        <div class="toggle" id="game-screen">
-          <div class="game-area">
-            <div class="mid-circle" id="go-button">
-              <h2 id="go-text">GO!</h2>
+            <!-- start game screen -->
+            <div class="toggle" id="game-screen">
+                <div class="game-area">
+                    <div class="mid-circle" id="go-button">
+                        <h2 id="go-text">GO!</h2>
+                    </div>
+                    <div class="top-left-button buttons" data-color="0">
+                        <h2 class="color-names">RED</h2>
+                    </div>
+                    <div class="top-right-button buttons" data-color="1">
+                        <h2 class="color-names">BLUE</h2>
+                    </div>
+                    <div class="bottom-left-button buttons" data-color="2">
+                        <h2 class="color-names">YELLOW</h2>
+                    </div>
+                    <div class="bottom-right-button buttons" data-color="3">
+                        <h2 class="color-names">GREEN</h2>
+                    </div>
+                </div>
             </div>
-            <div class="top-left-button buttons" data-color="0">
-              <h2 class="color-names">RED</h2>
-            </div>
-            <div class="top-right-button buttons" data-color="1">
-              <h2 class="color-names">BLUE</h2>
-            </div>
-            <div class="bottom-left-button buttons" data-color="2">
-              <h2 class="color-names">YELLOW</h2>
-            </div>
-            <div class="bottom-right-button buttons" data-color="3">
-              <h2 class="color-names">GREEN</h2>
-            </div>
-          </div>
-        </div>
-        <!-- end game screen -->
+            <!-- end game screen -->
 
-        <!-- start lost game screen -->
-        <div class="toggle" id="losing-screen">
-          <div class="game-area">
-            <div class="mid-circle"></div>
-            <div class="top-left-button buttons">
-              <h2>That was <br />not correct</h2>
+            <!-- start lost game screen -->
+            <div class="toggle" id="losing-screen">
+                <div class="game-area">
+                    <div class="mid-circle"></div>
+                    <div class="top-left-button buttons">
+                        <h2>That was <br />not correct</h2>
+                    </div>
+                    <div class="top-right-button buttons">
+                        <h2>
+                            Your score is: <br /><span id="in-button-score" class="current-score">0</span>
+                        </h2>
+                    </div>
+                    <div class="bottom-left-button buttons">
+                        <h2>good luck <br />next time!</h2>
+                    </div>
+                    <div class="bottom-right-button buttons">
+                        <h2></h2>
+                    </div>
+                </div>
             </div>
-            <div class="top-right-button buttons">
-              <h2>
-                Your score is: <br /><span
-                  id="in-button-score"
-                  class="current-score"
-                  >0</span
-                >
-              </h2>
-            </div>
-            <div class="bottom-left-button buttons">
-              <h2>good luck <br />next time!</h2>
-            </div>
-            <div class="bottom-right-button buttons">
-              <h2></h2>
-            </div>
-          </div>
-        </div>
-        <!-- end lost game screen -->
+            <!-- end lost game screen -->
 
-        <!-- start instructions screen -->
-        <div class="toggle" id="instructions-screen">
-          <div class="game-area">
-            <div class="mid-circle"></div>
-            <div class="top-left-button buttons">
-              <p>
-                1. Start the Game <br />
-                and select a difficulty
-              </p>
+            <!-- start instructions screen -->
+            <div class="toggle" id="instructions-screen">
+                <div class="game-area">
+                    <div class="mid-circle"></div>
+                    <div class="top-left-button buttons">
+                        <p>
+                            1. Start the Game <br />
+                            and select a difficulty
+                        </p>
+                    </div>
+                    <div class="top-right-button buttons">
+                        <p>
+                            2. Press the "Go" Button <br />
+                            and try to remember the <br />
+                            order the colors glow up
+                        </p>
+                    </div>
+                    <div class="bottom-left-button buttons">
+                        <p>
+                            3. Press the colors <br />
+                            with your mouse or the <br />
+                            assigned keys in the <br />
+                            correct order
+                        </p>
+                    </div>
+                    <div class="bottom-right-button buttons">
+                        <p>
+                            4. Repeat these steps <br />
+                            and have fun!
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="top-right-button buttons">
-              <p>
-                2. Press the "Go" Button <br />
-                and try to remember the <br />
-                order the colors glow up
-              </p>
-            </div>
-            <div class="bottom-left-button buttons">
-              <p>
-                3. Press the colors <br />
-                with your mouse or the <br />
-                assigned keys in the <br />
-                correct order
-              </p>
-            </div>
-            <div class="bottom-right-button buttons">
-              <p>
-                4. Repeat these steps <br />
-                and have fun!
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- end instructions screen -->
+            <!-- end instructions screen -->
 
-        <!-- start scores screen -->
-        <div class="toggle" id="scores-screen">
-          <div class="game-area">
-            <div class="mid-circle"></div>
-            <div class="top-left-button buttons">
-              <h2>Your Highscores:</h2>
+            <!-- start scores screen -->
+            <div class="toggle" id="scores-screen">
+                <div class="game-area">
+                    <div class="mid-circle"></div>
+                    <div class="top-left-button buttons">
+                        <h2>Your Highscores:</h2>
+                    </div>
+                    <div class="top-right-button buttons">
+                        <h2>Best Score:<span id="best-score">0</span></h2>
+                    </div>
+                    <div class="bottom-left-button buttons">
+                        <h2>2nd best Score:<span id="second-best-score">0</span></h2>
+                    </div>
+                    <div class="bottom-right-button buttons">
+                        <h2>3rd best Score:<span id="third-best-score">0</span></h2>
+                    </div>
+                </div>
             </div>
-            <div class="top-right-button buttons">
-              <h2>Best Score:<span id="best-score">0</span></h2>
-            </div>
-            <div class="bottom-left-button buttons">
-              <h2>2nd best Score:<span id="second-best-score">0</span></h2>
-            </div>
-            <div class="bottom-right-button buttons">
-              <h2>3rd best Score:<span id="third-best-score">0</span></h2>
-            </div>
-          </div>
-        </div>
-        <!-- end scores screen -->
+            <!-- end scores screen -->
 
-        <!-- start credits screen -->
-        <div class="toggle" id="credits-screen">
-          <div class="game-area">
-            <div class="mid-circle"></div>
-            <div class="top-left-button buttons">
-              <h2>created by:</h2>
+            <!-- start credits screen -->
+            <div class="toggle" id="credits-screen">
+                <div class="game-area">
+                    <div class="mid-circle"></div>
+                    <div class="top-left-button buttons">
+                        <h2>created by:</h2>
+                    </div>
+                    <div class="top-right-button buttons">
+                        <h2>NixTS</h2>
+                    </div>
+                    <div class="bottom-left-button buttons">
+                        <h2>
+                            Follow me on <br />
+                            <a href="https://github.com/NixTS">Github!</a>
+                        </h2>
+                    </div>
+                    <div class="bottom-right-button buttons">
+                        <h2></h2>
+                    </div>
+                </div>
             </div>
-            <div class="top-right-button buttons">
-              <h2>NixTS</h2>
+            <!-- end credits screen -->
+
+            <!-- start back to menu -->
+            <div class="back-to-menu toggle" id="back-to-menu">
+                <h2>Back To The Menu</h2>
             </div>
-            <div class="bottom-left-button buttons">
-              <h2>
-                Follow me on <br />
-                <a href="https://github.com/NixTS">Github!</a>
-              </h2>
-            </div>
-            <div class="bottom-right-button buttons">
-              <h2></h2>
-            </div>
-          </div>
+            <!-- end back to menu -->
         </div>
-        <!-- end credits screen -->
 
         <!-- start side menu -->
         <div id="side-menu">
-          <div id="side-score">
-            <h3>Score: <span class="current-score">0</span></h3>
-          </div>
-          <div id="side-color-name">
-            <h3>Turn <span id="color-name-option">On</span> Color Names</h3>
-          </div>
+            <div id="side-score" class="side-boxes">
+                <h3>Score: <span class="current-score">0</span></h3>
+            </div>
+            <div id="side-color-name" class="side-boxes">
+                <h3>Turn <span id="color-name-option">On</span> Color Names</h3>
+            </div>
         </div>
         <!-- end side menu -->
-
-        <!-- start back to menu -->
-        <div class="back-to-menu toggle" id="back-to-menu">
-          <h2>Back To The Menu</h2>
-        </div>
-        <!-- end back to menu -->
-      </div>
     </main>
     <!-- end main content -->
 
     <!-- start footer content -->
     <footer>
-      <h4>
-        This website was created by
-        <a href="https://github.com/NixTS">NixTS</a>
-        for educational purposes only.
-      </h4>
+        <h4>
+            This website was created by
+            <a href="https://github.com/NixTS">NixTS</a>
+            for educational purposes only.
+        </h4>
     </footer>
     <!-- end footer content -->
 
     <!-- java script file -->
     <script src="assets/js/script.js"></script>
-  </body>
+</body>
+
 </html>

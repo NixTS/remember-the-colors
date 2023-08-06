@@ -184,10 +184,23 @@ main {
 /* side menu */
 
 #side-menu {
-    position: fixed;
-    left: 1700px;
-    top: 100px;
+    position: absolute;
+    top: 150px;
     display: none;
+    justify-content: space-between;
+    width: 600px;
+
+}
+
+.side-boxes {
+    width: 280px;
+    height: 50px;
+    border: 2px solid var(--borders);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .color-names {
