@@ -369,7 +369,7 @@ function showBestScores() {
     storedJsonBestScore = localStorage.getItem("bestScoreArray");
     storedBestScoreArray = JSON.parse(storedJsonBestScore);
 
-    bestScore.innerText = storedBestScoreArray[0];
-    secondBestScore.innerText = storedBestScoreArray[1];
-    thirdBestScore.innerText = storedBestScoreArray[2];
+    bestScore.innerText = storedBestScoreArray[0] || "0";
+    secondBestScore.innerText = storedBestScoreArray[1] || "0";
+    thirdBestScore.innerText = storedBestScoreArray[2] || "0";
 }
