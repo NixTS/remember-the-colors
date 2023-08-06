@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let toggleAll = document.getElementsByClassName("toggle");
 
-    for (let i = 0; 1 < toggleAll.length; i++) {
+    for (let i = 0; i < toggleAll.length; i++) {
         toggleAll[i].style.display = "none";
 
         startScreen.style.display = "flex";
@@ -21,6 +21,8 @@ let goButton = document.getElementById("go-button");
 let cpuSequenceArray = [];
 let playerSequence = [];
 
+let bestScoreArray = [];
+let highestScore = 0;
 
 // variables for divs to be clicked in navigation menu
 let openGame = document.getElementById("start-game");
@@ -85,6 +87,8 @@ function openTheScores() {
     backToMenu.style.display = "flex";
     startScreen.style.display = "none";
     document.getElementById("info-text").textContent = "Scores";
+
+    showBestScores();
 }
 
 /**
@@ -116,14 +120,6 @@ function backToTheMenu() {
 
 // event listener for the back to menu div
 backToMenu.addEventListener("click", backToTheMenu);
-
-
-function bestScores() {
-
-}
-function bestScores() {
-
-}
 
 /**
  * choosing 'normal' difficulty
@@ -160,6 +156,10 @@ function showCurrentScore() {
     for (let i = 0; i < insertScore.length; i++) {
         insertScore[i].textContent = newScore;
     };
+
+    if (newScore > highestScore) {
+        highestScore = newScore;
+    }
 }
 
 
@@ -321,10 +321,6 @@ function runGame() {
 // Event listener for the go button click
 goButton.addEventListener("click", runGame);
 
-function saveScore() {
-
-}
-
 function gameEndCard() {
     let gameNormal = document.getElementById("game-screen");
     let infoText = document.getElementById("info-text");
@@ -332,4 +328,48 @@ function gameEndCard() {
     infoText.textContent = "Oops...";
     losingScreen.style.display = "flex";
     gameNormal.style.display = "none";
+
+    saveScore();
+}
+
+/**
+ * saves scores in a local storage and pushes new highscores to array
+ */
+function saveScore() {
+
+    storedJsonBestScore = localStorage.getItem("bestScoreArray");
+    storedBestScoreArray = JSON.parse(storedJsonBestScore) || [];
+
+    storedBestScoreArray.push(highestScore);
+
+    let uniqueScoresSet = new Set(storedBestScoreArray);
+
+    let uniqueScoresArray = Array.from(uniqueScoresSet);
+
+    uniqueScoresArray.sort((a, b) => b - a);
+
+    let jsonBestScore = JSON.stringify(uniqueScoresArray);
+    localStorage.setItem("bestScoreArray", jsonBestScore);
+
+    console.log("Stored best scores:", uniqueScoresArray);
+
+    console.log("1st", uniqueScoresArray[0]);
+    console.log("2nd", uniqueScoresArray[1]);
+    console.log("3rd", uniqueScoresArray[2]);
+}
+
+/**
+ * shows the highest three scores in the scores tab
+ */
+function showBestScores() {
+    let bestScore = document.getElementById("best-score");
+    let secondBestScore = document.getElementById("second-best-score");
+    let thirdBestScore = document.getElementById("third-best-score");
+
+    storedJsonBestScore = localStorage.getItem("bestScoreArray");
+    storedBestScoreArray = JSON.parse(storedJsonBestScore);
+
+    bestScore.innerText = storedBestScoreArray[0];
+    secondBestScore.innerText = storedBestScoreArray[1];
+    thirdBestScore.innerText = storedBestScoreArray[2];
 }
