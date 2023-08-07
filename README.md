@@ -33,7 +33,7 @@ The game's objective is simple yet stimulating: players must mimic a sequence of
 
 ### **Design**
 #### **Color Scheme**
-  
+
 #### **Typography**
 
 #### **Wireframes**
