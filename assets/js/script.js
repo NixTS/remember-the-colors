@@ -140,7 +140,7 @@ function chooseDifficultyNormal() {
 function chooseDifficultyHard() {
     difficultyScreen.style.display = "none";
     gameHard.style.display = "flex";
-    sideMenu.style.display = "block";
+    sideMenu.style.display = "flex";
     document.getElementById("info-text").textContent = "Press 'GO!' to start the Game!";
     gameMode = "hard";
 }
@@ -310,7 +310,7 @@ function runGame() {
             infoText.textContent = "Remember the sequence!";
 
         }
-    }
+    } v;
 
     /**
     * Set the game mode to normal or hard
