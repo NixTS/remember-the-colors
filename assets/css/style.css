@@ -49,7 +49,7 @@ a {
 /* header */
 
 header {
-    background-color: yellow;
+    border-bottom: 1px solid var(--borders);
     height: 100px;
     display: flex;
     justify-content: center;
@@ -59,7 +59,7 @@ header {
 /* footer */
 
 footer {
-    background-color: yellow;
+    border-top: 1px solid var(--borders);
     height: 100px;
     display: flex;
     justify-content: center;
