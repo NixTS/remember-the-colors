@@ -65,7 +65,28 @@ The game's objective is simple yet stimulating: players must mimic a sequence of
 ### **Features left to implement**
 
 ***
-## Technologies
+## **Technologies**
+
++ HTML
+  + This project uses HTML as the main language used to complete the structure of the website.
++ CSS
+  + This project uses custom written CSS to style the website.
++ JavaScript
+  + This project uses custom written JavaScript as its only programming language.
++ [Codeanywhere](https://app.codeanywhere.com/)
+  + Codeanywhere is a cloud-based integrated development environment (IDE) that allows developers to collaborate, write, and execute code from anywhere.
++ [GitHub](https://github.com/)
+  + GitHub is the hosting website used to store the source code for the website and [Git Pages](https://pages.github.com/) is used for the deployment of the live website.
++ [Git](https://git-scm.com/)
+  + Git is used as version control software to commit and push code to the GitHub repository where the source code is stored.
++ [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+  + Google chromes built in developer tools are used to inspect page elements and help debug issues with the website layout and test different CSS styles.
++ [balsamiq Wireframes](https://balsamiq.com/wireframes/)
+  + This was used to create wireframes for 'The Skeleton Plane' stage of UX design.
++ [Favicon](https://favicon.io/)
+  + Favicon.io was used to make the websites favicon
++ [Techsini](http://techsini.com/multi-mockup/index.php)
+  + techsini.com Multi Device website Mock-Up Generator was used to create the Mock-Up image in this README
 
 ***
 ## **Testing**
