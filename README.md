@@ -106,11 +106,31 @@ The game's objective is simple yet stimulating: players must mimic a sequence of
 
 ***
 ## **Deployment**
+
 ### **Project Creation**
+The project was started by navigating to the [template](https://github.com/Code-Institute-Org/gitpod-full-template) and clicking 'Use this template'. Under Repository name I input woodworking-club and checked the 'Include all branches' checkbox. I then navigated to the new [repository](). I then clicked the Code drop down and selected HTTPS and copied the link to the clipboard.
+
+Opening [Codeanywhere](https://app.codeanywhere.com/) and clicking 'New Workspace', I then pasted the [repository link](https://github.com/NixTS/remember-the-colors.git) into the URL field and clicked 'Create'. The following commands were used throughout the project:
+
++ git add filename - This command was used to add files to the staging area before committing.
++ git commit -m *commit message explaining the updates* - This command was used to commit changes to the local repository.
++ git push - This command is used to push all committed changes to the GitHub repository.
 
 ### **Using GitHub Pages**
+1. Navigate to the GitHub [Repository:](https://github.com/NixTS/remember-the-colors)
+2. Click the 'Settings' Tab.
+3. Scroll Down to the Git Hub Pages Heading.
+4. Select 'main Branch' as the source.
+5. Click the Save button.
+6. Click on the link to go to the live deployed page.
 
 ### **Run Locally**
+1. Navigate to the GitHub [Repository:](https://github.com/NixTS/remember-the-colors)
+2. Click the Code drop down menu.
+3. Either Download the ZIP file, unpack locally and open with IDE OR Copy Git URL from the HTTPS dialogue box.
+4. Open your development editor of choice and open a terminal window in a directory of your choice.
+5. Use the 'git clone' command in terminal followed by the copied git URL.
+6. A clone of the project will be created locally on your machine.
 
 ***
 ## **Credits**
