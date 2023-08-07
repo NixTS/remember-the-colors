@@ -33,8 +33,22 @@ The game's objective is simple yet stimulating: players must mimic a sequence of
 
 ### **Design**
 #### **Color Scheme**
++ Background
+  + RGB Color Code: rgb(150, 232, 238) - ![turquoise](media/readme-images/turqoise.jpg) Turquoise
+    + The utilization of a turquoise background color is deliberate, offering a seamless contrast to the game area while ensuring visual comfort
+
++ Border color
+  + RGB Color Code: rgb(51, 51, 51); - ![dark grey](media/readme-images/dark-grey.jpg) Dark Grey
+
++ Game Area
+  + RGB Color Code: rgb(255, 47, 47); - ![red](media/readme-images/red.jpg) Red
+  + RGB Color Code: rgb(43, 91, 248); - ![blue](media/readme-images/blue.jpg) Blue
+  + RGB Color Code: rgb(233, 253, 47); - ![yellow](media/readme-images/yellow.jpg) Yellow
+  + RGB Color Code: rgb(21, 224, 72); - ![green](media/readme-images/green.jpg) Green
+    + These button colors were selected due to their high contrast, facilitating clear differentiation between each of them
 
 #### **Typography**
+**Comic Sans** is employed across the website for its playful style, which blends harmoniously with the overall design
 
 #### **Wireframes**
 
