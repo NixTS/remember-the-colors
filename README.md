@@ -8,7 +8,7 @@ The website is an engaging and addictive Simon Says-style memory game that offer
 
 The game's objective is simple yet stimulating: players must mimic a sequence of colored buttons that light up, testing their memory and concentration. The inclusion of two difficulty modes, each with distinct interval timings, adds depth to the gameplay and caters to players of various skill levels. Moreover, the website dynamically displays the player's current score and their best scores, fostering healthy competition among users. Overall, the website offers an engaging and entertaining experience that keeps players coming back to challenge their memory prowess.
 
-![Techsini website mock-up]()
+![Techsini website mock-up](media/readme-images/techsini-mockup.jpg)
 
 ***
 ## **User Experience Design**
