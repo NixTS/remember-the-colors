@@ -124,29 +124,26 @@ backToMenu.addEventListener("click", backToTheMenu);
  * choosing 'normal' difficulty
  * intervals will be changed in function playSequence()
  */
-function chooseDifficultyNormal() {
+function chooseDifficulty(difficulty) {
     difficultyScreen.style.display = "none";
     gameNormal.style.display = "flex";
     sideMenu.style.display = "flex";
     document.getElementById("info-text").textContent = "Press 'GO!' to start the Game!";
-    gameMode = "normal";
-}
 
-/**
- * choosing 'hard' difficulty
- * intervals will be changed in function playSequence()
- */
-function chooseDifficultyHard() {
-    difficultyScreen.style.display = "none";
-    gameHard.style.display = "flex";
-    sideMenu.style.display = "flex";
-    document.getElementById("info-text").textContent = "Press 'GO!' to start the Game!";
-    gameMode = "hard";
+    if (difficulty == "normal") {
+        gameMode = "normal";
+    } else {
+        gameMode = "hard";
+    }
 }
 
 // event listeners for choosing difficulty
-difficultyNormal.addEventListener("click", chooseDifficultyNormal);
-difficultyHard.addEventListener("click", chooseDifficultyHard);
+difficultyNormal.addEventListener("click", function () {
+    chooseDifficulty("normal");
+});
+difficultyHard.addEventListener("click", function () {
+    chooseDifficulty("hard");
+});
 
 function showCurrentScore() {
     let newScore = playerSequence.length;
