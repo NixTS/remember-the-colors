@@ -16,7 +16,9 @@
 /* general */
 
 body {
+    width: auto;
     height: 100vh;
+    margin: auto;
     font-family: "comic sans MS", "comic sans";
     background-color: var(--main-contrast);
     display: flex;
@@ -26,6 +28,7 @@ body {
 
 h1 {
     font-size: 200%;
+    text-align: center;
 }
 
 h2 {
@@ -34,6 +37,7 @@ h2 {
 
 h4 {
     font-size: 80%;
+    text-align: center;
 }
 
 p {
@@ -76,7 +80,6 @@ main {
 .main-area {
     width: 800px;
     height: 800px;
-    margin: 80px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px, rgba(0, 0, 0, 0.1) 0px 0px 10px 0px;
     display: flex;
@@ -84,15 +87,6 @@ main {
     align-items: center;
     justify-content: center;
     gap: 30px;
-}
-
-#info-screen {
-    margin-top: 10px;
-
-}
-
-.back-to-menu {
-    margin-bottom: 10px;
 }
 
 #in-button-score {
@@ -145,6 +139,7 @@ main {
     box-sizing: border-box;
     border: 10px solid var(--borders);
     position: relative;
+    text-align: center;
 }
 
 .top-left-button {
@@ -203,4 +198,117 @@ main {
 
 .color-names {
     display: none;
+}
+
+/* media query */
+
+/* Styles for screens from 320px  */
+@media screen and (min-width: 320px) {
+
+    /* general */
+
+    h1 {
+        font-size: 120%;
+    }
+
+    h2 {
+        font-size: 90%;
+    }
+
+    h3 {
+        font-size: 80%;
+    }
+
+    h4 {
+        font-size: 60%;
+    }
+
+    p {
+        font-size: 60%;
+    }
+
+    /* header */
+
+    header {
+        height: 50px;
+    }
+
+    /* footer */
+
+    footer {
+        height: 20px;
+    }
+
+    /* main area */
+
+    .main-area {
+        width: 300px;
+        height: 360px;
+        border-radius: 10px;
+        gap: 10px;
+    }
+
+    #in-button-score {
+        display: block;
+        text-align: center;
+    }
+
+    /* game area */
+
+    .game-area {
+        width: 280px;
+        height: 280px;
+        border: 4px solid var(--borders);
+        border-radius: 10px;
+    }
+
+    /* middle circle */
+
+    .mid-circle {
+        width: 80px;
+        height: 80px;
+        border: 8px solid var(--borders);
+    }
+
+    #go-button h2 {
+        font-size: 180%;
+    }
+
+    /* color buttons */
+
+    .buttons {
+        border: 4px solid var(--borders);
+    }
+
+    .top-left-button {
+        border-radius: 10px 0 0 0;
+    }
+
+    .top-right-button {
+        border-radius: 0 10px 0 0;
+    }
+
+    .bottom-left-button {
+        border-radius: 0 0 0 10px;
+    }
+
+    .bottom-right-button {
+        border-radius: 0 0 10px 0;
+    }
+
+    /* side menu */
+
+    #side-menu {
+        position: absolute;
+        top: auto;
+        bottom: 24px;
+        display: none;
+        flex-direction: column;
+        width: auto;
+        gap: 2px;
+    }
+
+    .side-boxes {
+        height: 30px;
+    }
 }
