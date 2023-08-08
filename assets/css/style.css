@@ -105,7 +105,6 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-    background-color: var(--borders);
     border: 5px solid var(--borders);
     border-radius: 50px;
 }

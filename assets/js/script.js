@@ -144,6 +144,9 @@ difficultyHard.addEventListener("click", function () {
     chooseDifficulty("hard");
 });
 
+/**
+ * shows the current score while playing and in the end card
+ */
 function showCurrentScore() {
     let newScore = playerSequence.length;
     let insertScore = document.getElementsByClassName("current-score");
@@ -293,6 +296,11 @@ function runGame() {
         return true;
     }
 
+    /**
+     * a game info displayed above the game pad to signal to the user:
+     * if a new color is beign added to the sequence
+     * if it's the users turn to play
+     */
     function gameInfo() {
         let infoText = document.getElementById("info-text");
 
@@ -308,6 +316,9 @@ function runGame() {
 // Event listener for the go button click
 goButton.addEventListener("click", runGame);
 
+/**
+ * displays and end card if the user does not repeat the correct sequence
+ */
 function gameEndCard() {
     let gameNormal = document.getElementById("game-screen");
     let infoText = document.getElementById("info-text");
@@ -323,7 +334,6 @@ function gameEndCard() {
  * saves scores in a local storage and pushes new highscores to array
  */
 function saveScore() {
-
     let storedJsonBestScore = localStorage.getItem("bestScoreArray");
     let storedBestScoreArray = JSON.parse(storedJsonBestScore) || [];
 
