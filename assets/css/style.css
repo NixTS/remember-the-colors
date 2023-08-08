@@ -368,6 +368,7 @@ main {
     .game-area {
         width: 360px;
         height: 360px;
+        border-radius: 20px;
     }
 
     /* middle circle */
