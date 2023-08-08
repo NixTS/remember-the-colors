@@ -312,3 +312,64 @@ main {
         height: 30px;
     }
 }
+
+
+/* Styles for screens from 425px  */
+@media screen and (min-width: 425px) {
+
+    /* general */
+
+    h1 {
+        font-size: 140%;
+    }
+
+    h2 {
+        font-size: 110%;
+    }
+
+    h3 {
+        font-size: 90%;
+    }
+
+    h4 {
+        font-size: 80%;
+    }
+
+    p {
+        font-size: 80%;
+    }
+
+    /* footer */
+
+    footer {
+        height: 30px;
+    }
+
+    /* main area */
+
+    .main-area {
+        width: 400px;
+        height: 460px;
+    }
+
+    /* game area */
+
+    .game-area {
+        width: 360px;
+        height: 360px;
+    }
+
+    /* middle circle */
+
+    .mid-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* side menu */
+
+    #side-menu {
+        bottom: 40px;
+        gap: 4px;
+    }
+}
