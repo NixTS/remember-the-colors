@@ -19,7 +19,7 @@ body {
     width: auto;
     height: 100vh;
     margin: auto;
-    font-family: "comic sans MS", "comic sans";
+    font-family: "comic sans MS", "comic sans", "sans serif";
     background-color: var(--main-contrast);
     display: flex;
     flex-direction: column;
@@ -41,7 +41,7 @@ h4 {
 }
 
 p {
-    font-size: 100%;
+    font-size: 120%;
 }
 
 a {
@@ -198,6 +198,20 @@ main {
 
 .color-names {
     display: none;
+}
+
+/* 404 page */
+
+#page-not-found-link {
+    font-size: 200%;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+#page-not-found {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 /* media query */
