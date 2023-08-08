@@ -373,3 +373,74 @@ main {
         gap: 4px;
     }
 }
+
+/* Styles for screens from 768px to 1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* general */
+
+    h2 {
+        font-size: 160%;
+    }
+
+    h3 {
+        font-size: 120%;
+    }
+
+    h4 {
+        font-size: 80%;
+    }
+
+    p {
+        font-size: 120%;
+    }
+
+    /* header */
+
+    header {
+        height: 60px;
+    }
+
+    /* footer */
+
+    footer {
+        height: 40px;
+    }
+
+    /* main area */
+
+    .main-area {
+        width: 680px;
+        height: 720px;
+    }
+
+    /* game area */
+
+    .game-area {
+        width: 600px;
+        height: 600px;
+    }
+
+    /* middle circle */
+
+    .mid-circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    #go-button h2 {
+        font-size: 260%;
+    }
+
+    /* side menu */
+
+    #side-menu {
+        bottom: 60px;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .side-boxes {
+        height: 50px;
+    }
+}
