@@ -202,8 +202,8 @@ main {
 
 /* media query */
 
-/* Styles for screens from 320px  */
-@media screen and (min-width: 320px) {
+/* Styles for screens from 320px to 424px */
+@media screen and (min-width: 320px) and (max-width: 424px) {
 
     /* general */
 
@@ -314,8 +314,8 @@ main {
 }
 
 
-/* Styles for screens from 425px  */
-@media screen and (min-width: 425px) {
+/* Styles for screens from 425px to 767px */
+@media screen and (min-width: 425px) and (max-width: 767px) {
 
     /* general */
 
