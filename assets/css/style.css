@@ -107,7 +107,7 @@ main {
     position: relative;
     background-color: var(--borders);
     border: 5px solid var(--borders);
-    border-radius: 20px;
+    border-radius: 50px;
 }
 
 /* middle circle */
