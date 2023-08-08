@@ -113,8 +113,8 @@ main {
 /* middle circle */
 
 .mid-circle {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     border: 15px solid var(--borders);
     background-color: orange;
     border-radius: 50%;
