@@ -186,12 +186,10 @@ colorNameButton.addEventListener("click", turnColorNameOption);
  * the player has to repeat the sequence by clicking on the colored buttons
  */
 function runGame() {
-    let round = 1;
     let playerTurn = false;
 
     cpuSequenceArray = [];
     playerSequence = [];
-    round = 1;
     playerTurn = false;
     addToSequence();
     playSequence();
@@ -269,7 +267,6 @@ function runGame() {
                 if (checkPlayerSequence()) {
                     if (playerSequence.length === cpuSequenceArray.length) {
                         playerTurn = false;
-                        round++;
                         setTimeout(function () {
                             addToSequence();
                             playerSequence = [];
@@ -306,15 +303,7 @@ function runGame() {
             infoText.textContent = "Remember the sequence!";
 
         }
-    } v;
-
-    /**
-    * Set the game mode to normal or hard
-    * @param {string} mode - "normal" or "hard"
-    */
-    function setGameMode(mode) {
-        gameMode = mode;
-    }
+    };
 }
 
 // Event listener for the go button click
