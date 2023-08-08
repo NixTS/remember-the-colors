@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleAll[i].style.display = "none";
 
         startScreen.style.display = "flex";
-        console.log("everything loaded!");
     }
 
 });
@@ -318,7 +317,6 @@ function runGame() {
     */
     function setGameMode(mode) {
         gameMode = mode;
-        console.log(`Game Mode set to ${gameMode}`);
     }
 }
 
@@ -354,12 +352,6 @@ function saveScore() {
 
     let jsonBestScore = JSON.stringify(uniqueScoresArray);
     localStorage.setItem("bestScoreArray", jsonBestScore);
-
-    console.log("Stored best scores:", uniqueScoresArray);
-
-    console.log("1st", uniqueScoresArray[0]);
-    console.log("2nd", uniqueScoresArray[1]);
-    console.log("3rd", uniqueScoresArray[2]);
 }
 
 /**
