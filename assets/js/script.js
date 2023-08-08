@@ -33,7 +33,6 @@ let openCredits = document.getElementById("credits");
 let startScreen = document.getElementById("start-screen");
 let difficultyScreen = document.getElementById("difficulty-screen");
 let gameNormal = document.getElementById("game-screen");
-let gameHard = document.getElementById("game-screen");
 let losingScreen = document.getElementById("losing-screen");
 let instructionsScreen = document.getElementById("instructions-screen");
 let scoresScreen = document.getElementById("scores-screen");
@@ -151,7 +150,7 @@ function showCurrentScore() {
 
     for (let i = 0; i < insertScore.length; i++) {
         insertScore[i].textContent = newScore;
-    };
+    }
 
     if (newScore > highestScore) {
         highestScore = newScore;
@@ -303,7 +302,7 @@ function runGame() {
             infoText.textContent = "Remember the sequence!";
 
         }
-    };
+    }
 }
 
 // Event listener for the go button click
@@ -325,12 +324,12 @@ function gameEndCard() {
  */
 function saveScore() {
 
-    storedJsonBestScore = localStorage.getItem("bestScoreArray");
-    storedBestScoreArray = JSON.parse(storedJsonBestScore) || [];
+    let storedJsonBestScore = localStorage.getItem("bestScoreArray");
+    let storedBestScoreArray = JSON.parse(storedJsonBestScore) || [];
 
     storedBestScoreArray.push(highestScore);
 
-    let uniqueScoresSet = new Set(storedBestScoreArray);
+    let uniqueScoresSet = bestScoreArray(storedBestScoreArray);
 
     let uniqueScoresArray = Array.from(uniqueScoresSet);
 
@@ -348,8 +347,8 @@ function showBestScores() {
     let secondBestScore = document.getElementById("second-best-score");
     let thirdBestScore = document.getElementById("third-best-score");
 
-    storedJsonBestScore = localStorage.getItem("bestScoreArray");
-    storedBestScoreArray = JSON.parse(storedJsonBestScore);
+    let storedJsonBestScore = localStorage.getItem("bestScoreArray");
+    let storedBestScoreArray = JSON.parse(storedJsonBestScore);
 
     bestScore.innerText = storedBestScoreArray[0] || "0";
     secondBestScore.innerText = storedBestScoreArray[1] || "0";
