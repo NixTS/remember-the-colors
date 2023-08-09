@@ -221,6 +221,10 @@ main {
 
     /* general */
 
+    body {
+        height: 100vh;
+    }
+
     h1 {
         font-size: 120%;
     }
@@ -332,6 +336,10 @@ main {
 
     /* general */
 
+    body {
+        height: 100vh;
+    }
+
     h1 {
         font-size: 140%;
     }
@@ -440,6 +448,10 @@ main {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
     /* general */
+
+    body {
+        height: 100vh;
+    }
 
     h2 {
         font-size: 180%;
