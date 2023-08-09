@@ -7,7 +7,7 @@ Live Website: [Tobis "Remember The Colors" Game](https://nixts.github.io/remembe
 
 The website is an engaging and addictive Simon Says-style memory game that offers an exciting and challenging experience to players. With a sleek and user-friendly interface, the game captivates users from the moment they land on the start screen. Navigating through the different screens, including difficulty selection, gameplay, instructions, scores, and credits, is intuitive and seamless. 
 
-The game's objective is simple yet stimulating: players must mimic a sequence of colored buttons that light up, testing their memory and concentration. The inclusion of two difficulty modes, each with distinct interval timings, adds depth to the gameplay and caters to players of various skill levels. Moreover, the website dynamically displays the player's current score and their best scores, fostering healthy competition among users. Overall, the website offers an engaging and entertaining experience that keeps players coming back to challenge their memory prowess.
+The game's objective is simple yet stimulating: players must mimic a sequence of colored buttons that light up, testing their memory and concentration. The inclusion of two difficulty modes, each with distinct interval timings, adds depth to the gameplay and caters to players of various skill levels. Moreover, the website dynamically displays the player's current score. Overall, the website offers an engaging and entertaining experience that keeps players coming back to challenge their memory prowess.
 
 ![Techsini website mock-up](media/readme-images/techsini-mockup.jpg)
 
@@ -195,9 +195,7 @@ A credits screen has been added to allow the user to visit the creators website 
 ***
 
 ## **Testing**
-
-### **Strategy**
-
+v
 + Testing is required on Tobis Remember The Colors responsive website.
 + The script must work correctly and reflect the intended functionality.
 + Testing is to be done on the most common browsers such as Chrome, Opera, Firefox, Safari and Edge.
