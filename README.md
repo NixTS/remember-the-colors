@@ -233,6 +233,21 @@ Testing by this method is to evaluate responsiveness on various screen sizes and
 
 This test was repeated using the different browsers mentioned in the summary section above.
 
+### **Other Tests**
+
+A Chrome DevTools Lighthouse test has been performed with the following results:
+
+![chrome devtools lighthouse test](media/readme-images/lighthouse-test.jpg)
+
+How to perform a Chrome DevTools Lighthouse test:
+
+1. Open a website with the Google Chrome browser
+2. Right click anywhere on the website and click "inspect" in the dropdown menu to open Chrome DevTools
+3. Open more tabs by clicking on the double arrows on the top and select "Lighthouse"
+4. Select Mode, Device, Categories and Plugins
+5. Click "Analyze page load"
+6. After a short waiting time the result will be displayed
+
 ### **Unresolved Errors, Issues and Bugs**
 
 + Double Clicking Bug
