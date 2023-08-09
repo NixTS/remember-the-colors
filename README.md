@@ -195,7 +195,7 @@ A credits screen has been added to allow the user to visit the creators website 
 ***
 
 ## **Testing**
-v
+
 + Testing is required on Tobis Remember The Colors responsive website.
 + The script must work correctly and reflect the intended functionality.
 + Testing is to be done on the most common browsers such as Chrome, Opera, Firefox, Safari and Edge.
