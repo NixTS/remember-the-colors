@@ -4,6 +4,7 @@ Live Website: [Tobis "Remember The Colors" Game](https://nixts.github.io/remembe
 
 ***
 ## **Purpose**
+
 The website is an engaging and addictive Simon Says-style memory game that offers an exciting and challenging experience to players. With a sleek and user-friendly interface, the game captivates users from the moment they land on the start screen. Navigating through the different screens, including difficulty selection, gameplay, instructions, scores, and credits, is intuitive and seamless. 
 
 The game's objective is simple yet stimulating: players must mimic a sequence of colored buttons that light up, testing their memory and concentration. The inclusion of two difficulty modes, each with distinct interval timings, adds depth to the gameplay and caters to players of various skill levels. Moreover, the website dynamically displays the player's current score and their best scores, fostering healthy competition among users. Overall, the website offers an engaging and entertaining experience that keeps players coming back to challenge their memory prowess.
@@ -11,16 +12,21 @@ The game's objective is simple yet stimulating: players must mimic a sequence of
 ![Techsini website mock-up](media/readme-images/techsini-mockup.jpg)
 
 ***
+
 ## **User Experience Design**
+
 ### **User stories**
 
 #### **First Time Visitor Goals**
+
 + As a first time user, 
 
 #### **Returning Visitor Goals**
+
 + As a returning user, 
 
 #### **Frequent Visitor Goals**
+
 + As a frequent user, 
 
 ### **Structure**
@@ -32,7 +38,9 @@ The game's objective is simple yet stimulating: players must mimic a sequence of
 > As a frequent user, 
 
 ### **Design**
+
 #### **Color Scheme**
+
 + Background
   + RGB Color Code: rgb(150, 232, 238) - ![turquoise](media/readme-images/turqoise.jpg) Turquoise
     + The utilization of a turquoise background color is deliberate, offering a seamless contrast to the game area while ensuring visual comfort
@@ -57,14 +65,16 @@ The game's objective is simple yet stimulating: players must mimic a sequence of
 ### **Limitations**
 
 ***
+
 ## **Features**
+
 ### **Existing Features**
-+ Feature
-  + Feature description
- 
+
+
 ### **Features left to implement**
 
 ***
+
 ## **Technologies**
 
 + HTML
@@ -89,12 +99,27 @@ The game's objective is simple yet stimulating: players must mimic a sequence of
   + techsini.com Multi Device website Mock-Up Generator was used to create the Mock-Up image in this README
 
 ***
+
 ## **Testing**
+
 ### **Strategy**
+
 #### **Summary**
 
 ### **Procedure**
+
 #### **Validator testing**
+
++ HTML
+  + No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fnixts.github.io%2Fremember-the-colors%2F)
++ CSS
+  + No errors were found when passing through the official [(Jigsaw) validator](http://jigsaw.w3.org/css-validator/validator?lang=de&profile=css3svg&uri=https%3A%2F%2Fnixts.github.io%2Fremember-the-colors%2F&usermedium=all&vextwarning=&warning=1)
++ JavaScript
+  + No errors were found when passing through the official [Jshint validator](https://jshint.com/)
+  + There are 27 functions in this file.
+  + Function with the largest signature take 2 arguments, while the median is 0.
+  + Largest function has 16 statements in it, while the median is 5.
+  + The most complex function has a cyclomatic complexity value of 4 while the median is 1.
 
 #### **Responsiveness**
 
@@ -105,9 +130,11 @@ The game's objective is simple yet stimulating: players must mimic a sequence of
 ### **Unresolved Errors, Issues and Bugs**
 
 ***
+
 ## **Deployment**
 
 ### **Project Creation**
+
 The project was started by navigating to the [template](https://github.com/Code-Institute-Org/gitpod-full-template) and clicking 'Use this template'. Under Repository name I input woodworking-club and checked the 'Include all branches' checkbox. I then navigated to the new [repository](). I then clicked the Code drop down and selected HTTPS and copied the link to the clipboard.
 
 Opening [Codeanywhere](https://app.codeanywhere.com/) and clicking 'New Workspace', I then pasted the [repository link](https://github.com/NixTS/remember-the-colors.git) into the URL field and clicked 'Create'. The following commands were used throughout the project:
@@ -117,6 +144,7 @@ Opening [Codeanywhere](https://app.codeanywhere.com/) and clicking 'New Workspac
 + git push - This command is used to push all committed changes to the GitHub repository.
 
 ### **Using GitHub Pages**
+
 1. Navigate to the GitHub [Repository:](https://github.com/NixTS/remember-the-colors)
 2. Click the 'Settings' Tab.
 3. Scroll Down to the Git Hub Pages Heading.
@@ -125,6 +153,7 @@ Opening [Codeanywhere](https://app.codeanywhere.com/) and clicking 'New Workspac
 6. Click on the link to go to the live deployed page.
 
 ### **Run Locally**
+
 1. Navigate to the GitHub [Repository:](https://github.com/NixTS/remember-the-colors)
 2. Click the Code drop down menu.
 3. Either Download the ZIP file, unpack locally and open with IDE OR Copy Git URL from the HTTPS dialogue box.
@@ -133,7 +162,9 @@ Opening [Codeanywhere](https://app.codeanywhere.com/) and clicking 'New Workspac
 6. A clone of the project will be created locally on your machine.
 
 ***
+
 ## **Credits**
+
 ### **Content**
 
 ### **Media**
