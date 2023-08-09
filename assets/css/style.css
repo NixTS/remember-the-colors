@@ -318,8 +318,7 @@ main {
 
     #side-menu {
         position: absolute;
-        top: auto;
-        bottom: 24px;
+        top: 54px;
         display: none;
         flex-direction: column;
         width: auto;
@@ -431,8 +430,7 @@ main {
 
     #side-menu {
         position: absolute;
-        top: auto;
-        bottom: 24px;
+        top: 64px;
         display: none;
         flex-direction: column;
         width: auto;
