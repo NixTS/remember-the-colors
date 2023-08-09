@@ -205,6 +205,24 @@ A credits screen has been added to allow the user to visit the creators website 
 
 ### **Procedure**
 
+#### **Functionality**
+
+Steps:
+
+1. Start the game by pressing the "GO!" button in the middle
+2. Info Text switches to "Remember the sequence!" as an indicator that the sequence will now be played
+3. The color buttons will light up
+4. Info Text switches to "Do you remember the correct sequence?" asking the user to click the color button in the correct sequence
+
+Result:
+
+|   | Correct Sequence | Incorrect Sequence |
+| ------------- | ------------- | ------------ |
+|Expected: | After clicking the correct sequence, the Info Text will change back to "Remember the sequence!", the next color will be added and the sequence starts again  | After clicking a button that is not part of the sequence, the End Card will be displayed immediately, the user can now see his score and has the only option to return the menu by clicking the "Back To Menu" button |
+| Actual: | As expected  | As expected |
+
+
+
 #### **Validator testing**
 
 + HTML
@@ -220,6 +238,8 @@ A credits screen has been added to allow the user to visit the creators website 
 
 #### **Responsiveness**
 
+Steps:
+
 1. Open deployed website in Chrome browser
 2. Right-clicking an element on the website
 3. Select 'Inspect Element' to open Chrome Developer Tools
@@ -229,9 +249,12 @@ Test criteria are:
 + Does each div have enough space between one another?
 + Are all texts and headers correctly displayed and readable?
 
-Testing by this method is to evaluate responsiveness on various screen sizes and swiftly address bugs and errors before implementing permanent solutions.
+Expected:
 
-This test was repeated using the different browsers mentioned in the summary section above.
+The website will be displayed in an orderly fashion across all devices
+
+Actual: As expected
+
 
 ### **Other Tests**
 
