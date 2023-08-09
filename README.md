@@ -70,8 +70,92 @@ The game's objective is simple yet stimulating: players must mimic a sequence of
 
 ### **Existing Features**
 
++ Tobis Remember The Colors Game Header
+  + Featured at the top of the page, a simple header in text form. Showing the user the name of the game.
+
+![header](media/readme-images/header.jpg)
+
++ The Footer
+  + Located at the bottom, a footer indication what this website and game is for.
+
+![footer](media/readme-images/footer.jpg)
+
++ The Start Screen
+  + This first section, the start screen is where the user navigates through the games functions.
+  + The user will be able to click each button, guiding them to their desired section.
+
+![start screen](media/readme-images/start-screen.jpg)
+
++ The Difficulty Selection
+  + Upon clicking "Start" the user will have the choice to select a difficulty.
+  + "Normal" With an interval timer of 600ms, the time between the colors glowing up
+  + "Hard" With an interval timer of 350ms, the time between the colors glowing up
+
+![difficulty screen](media/readme-images/difficulty-selection.jpg)
+
++ The Game Screen
+  + Four big colored buttons for ease of gameplay on all devices.
+  + A big "Go!" button in the center to show how to start the game.
+  + An info bar on top, indicating to the user whats currently happening. 
+    + Either to remember the next sequence, if the script is generating a new sequence, or to click the correct sequence of colors.
+
+![game screen](media/readme-images/game-screen.jpg)
+
++ The End Card
+  + If the user clicks the wrong color in the sequence, an end card will display, indicating the user that they lost the game.
+  + Showing the score of the current game.
+
+![end card](media/readme-images/end-card.jpg)
+
++ The Instructions Screen
+  + An instructions screen, explaining how to play the game.
+
+![instructions screen](media/readme-images/instructions.jpg)
+
++ The Scores Screen
+  + The scores screen will show the users highscores.
+  + through a local storage, all scores will be saved here, for the user to see in every browser session.
+
+![scores screen](media/readme-images/highscores.jpg)
+
++ The Credits Screen
+  + A simple credits screen showing who the creator of this website is.
+
+![credits screen](media/readme-images/credits.jpg)
+
++ The Scores Display
+  + After selecting a difficulty, a "Scores" display appear on top of the game.
+  + Showing the current score after the user completes a sequence in the correct order.
+
++ The Turn "ON/OFF" Color Names Button.
+  + After selecting a difficulty, a button will appear on top of the screen.
+  + This button will turn on the colors names to help users with visual impairments or color blindness to enjoy this game.
+
+![turn on/off color names button](media/readme-images/side-menu.jpg)
+![color names on game pad](media/readme-images/game-screen-with-names.jpg)
+
++ The Back To Menu Button
+  + After clicking a button on the start screen, a back to menu button will display below the game area.
+  + Clicking this button will refresh the page, leading the user back to the start screen.
+
+![back to menu button](media/readme-images/back-to-menu-button.jpg)
+
++ Favicon
+  + A custom favicon has been added to show uniqueness and making the tab easier to find in the browser.
+
+![favicon](media/readme-images/favicon-logo.jpg)
+
++ A custom "404"-Site
+  + A custom 404-site has been added to lead the user back to the homepage, in case an incorrect URL is typed in.
+
+![404 site](media/readme-images/page-not-found-site.jpg)
+
 
 ### **Features left to implement**
+
++ Third Difficulty Setting With A Timer Function
+  + A third difficulty setting that lets the user play against a timer.
+  + Adding more difficulty by decreasing the time to think about the correct sequence.
 
 ***
 
