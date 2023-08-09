@@ -58,12 +58,6 @@ The game's objective is simple yet stimulating: players must mimic a sequence of
 #### **Typography**
 **Comic Sans** is employed across the website for its playful style, which blends harmoniously with the overall design
 
-#### **Wireframes**
-
-#### **Differences to Design**
-
-### **Limitations**
-
 ***
 
 ## **Features**
@@ -275,6 +269,9 @@ Opening [Codeanywhere](https://app.codeanywhere.com/) and clicking 'New Workspac
 
 ### **Content**
 
-### **Media**
++ The idea for this game stems from the popular "Simon Game" developed by Hasbro. I had a "Simon Game" as a child and my goal was to create and online version of this game to arouse nostalgic feelings.
++ The content of this website was created by [Tobias Schmauder aka. NixTS](https://github.com/NixTS).
++ The JavaScript code provided was made with the knowledge gained through the CodeInstitute Full Stack Developer course.
 
 ### **Acknowledgements**
+I'd like to thank my mentor Daisy McGirr for her guidance throughout my project.
