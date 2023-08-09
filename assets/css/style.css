@@ -512,7 +512,7 @@ main {
         height: 50px;
         border: 2px solid var(--borders);
         border-radius: 5px;
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
     }
@@ -588,7 +588,7 @@ main {
     .side-boxes {
         width: 160px;
         height: 40px;
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
     }
@@ -659,7 +659,7 @@ main {
         position: absolute;
         left: 10px;
         width: 160px;
-        display: flex;
+        display: none;
         flex-direction: column;
     }
 
@@ -668,8 +668,8 @@ main {
     }
 }
 
-/* Styles for screens from 1024px landscape mode */
-@media screen and (min-width: 1024px) and (orientation: landscape) {
+/* Styles for screens from 1024px to 1439px landscape mode */
+@media screen and (min-width: 1024px) and (max-width: 1439px) and (orientation: landscape) {
     /* general */
 
     h1 {
@@ -724,6 +724,14 @@ main {
     }
 
     /* side menu */
+
+    #side-menu {
+        position: absolute;
+        left: 10px;
+        width: 160px;
+        display: none;
+        flex-direction: column;
+    }
 
     .side-boxes {
         width: 160px;
