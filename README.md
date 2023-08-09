@@ -188,7 +188,12 @@ The game's objective is simple yet stimulating: players must mimic a sequence of
 
 ### **Strategy**
 
-#### **Summary**
++ Testing is required on Tobis Remember The Colors responsive website.
++ The script must work correctly and reflect the intended functionality.
++ Testing is to be done on the most common browsers such as Chrome, Opera, Firefox, Safari and Edge.
++ Testing it to be done on the most common devices such as Samsung, Apple and Huawei.
++ No elements should overlap another container div. All elements should remain on the screen at all sizes above 320px.
++ All external links must open in a new tab.
 
 ### **Procedure**
 
@@ -207,11 +212,30 @@ The game's objective is simple yet stimulating: players must mimic a sequence of
 
 #### **Responsiveness**
 
-#### **Navigation and external Links**
+1. Open deployed website in Chrome browser
+2. Right-clicking an element on the website
+3. Select 'Inspect Element' to open Chrome Developer Tools
 
-### **Test Results and Resolutions**
+Test criteria are:
+
++ Does each div have enough space between one another?
++ Are all texts and headers correctly displayed and readable?
+
+Testing by this method is to evaluate responsiveness on various screen sizes and swiftly address bugs and errors before implementing permanent solutions.
+
+This test was repeated using the different browsers mentioned in the summary section above.
 
 ### **Unresolved Errors, Issues and Bugs**
+
++ Double Clicking Bug
+  + While playing the game and its the users turn to click the correct sequence an error may occur if:
+    + The user double clicks the color button in a very quick succession
+  + This issue has been tested with: 
+    + A mouse recorder to meassure the time between clicks for this bug to occur
+  + The result was:
+    + The time between clicks has to be smaller than 120ms
+  + This bug has not been resolved yet, because:
+    + The underlying issue has not been occured during normal gaming sessions, only during the testing phase, in which the game was tested to its limits. 
 
 ***
 
