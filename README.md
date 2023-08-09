@@ -19,23 +19,39 @@ The game's objective is simple yet stimulating: players must mimic a sequence of
 
 #### **First Time Visitor Goals**
 
-+ As a first time user, 
++ As a first time user, i want to play a short memory game with different difficulty settings.
++ As a first time user, i want to learn more about the game.
++ As a first time user, i want to know who created the website.
 
 #### **Returning Visitor Goals**
 
-+ As a returning user, 
++ As a returning user, i want to see my past highscores.
 
 #### **Frequent Visitor Goals**
 
-+ As a frequent user, 
++ As a frequent user, if any updates has been made to the website.
 
 ### **Structure**
 
-> As a first time user, 
+A difficulty setting has been added to add depth to the gameplay and cater to different players skill levels.
+The purpose of this is to fulfill user story:
+> As a first time user, i want to play a short memory game with different difficulty settings.
 
-> As a returning user, 
+An instructions screen has been added to explain how this game works.
+The purpose of this is to fulfill user story:
+> As a first time user, i want to learn more about the game.
 
-> As a frequent user, 
+A credits screen has been added to explain who and how this game was created.
+The purpose of this is to fulfill user story:
+> As a first time user, i want to know who created the website.
+
+A scores screen with a local storage has been added to save the users past scores and display the best three.
+The purpose of this is to fulfill user story:
+> As a returning user, i want to see my past highscores.
+
+A credits screen has been added to allow the user to visit the creators website and see if any updates to the website have been made.
+> As a frequent user, if any updates has been made to the website.
+
 
 ### **Design**
 
